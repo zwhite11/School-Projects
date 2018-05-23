@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <title>About us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+        .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+        .fa-anchor,.fa-coffee {font-size:200px}
+    </style>
+    <body>
+
+        <!-- Navbar -->
+        <div class="w3-top">
+            <div class="w3-bar w3-red w3-card-2 w3-left-align w3-large">
+                <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+                <a href="./index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+                <a href="./aboutus.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Pizzapolis</a>
+                <div class="w3-dropdown-hover w3-red">
+                    <button class="w3-button w3-hide-small w3-padding-large w3-red w3-hover-white">Menu</button>
+                    <div class="w3-red w3-dropdown-content w3-bar-block w3-card-4 ">
+                        <a href="./pizza.html" class="w3-bar-item w3-button">Pizza</a>
+                        <a href="./sides.html" class="w3-bar-item w3-button">Sides</a>
+
+                    </div>
+                </div>  
+                <a href="./contactus.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact Us</a>
+                <a href="./order.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Order Online Now!</a>
+                <a href="./viewCart.html" class="w3-bar-item w3-button w3-padding-large">Your Cart</a>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="w3-container w3-red w3-center" style="padding:128px 16px">
+            <h1 class="w3-margin w3-jumbo">PIZZAPOLIS</h1>
+        </header>
+
+        <!-- First Grid -->
+        <div class="w3-row-padding w3-padding-64 w3-container">
+            <div class="w3-content">
+                <div class="w3-twothird">
+                    <h1>About us</h1>
+                    <p class="w3-text-grey">Since opening its' doors 35 years ago Pizzapolis has served only the same award-winning delicious pizza, using the best quality Italian, California and local ingredients, including the freshest hand-cut vegetables.</p>
+                    <p class="w3-text-grey">Pizzapolis's tomato sauce is the highest quality. Made from only grade-A tomatoes picked and packed fresh in season. Only the best tasting cheese is used on every pizza served.
+                        Pizzapolis prides itself on this rich tradition of mouth-water pizza and superior service. At Pizzapolis pleasing the customer comes first.
+                        Pizzapolis is motivated by the quality and taste of the product it serves.</p>
+                    <p class="w3-text-grey">Come to Pizzapolis and we'll make you the freshest, best tasting, highest quality pizza you'll ever eat. We promise once you eat our pizza, you'll never go anywhere else. Pizzapolis, an international award winning pizza treasure, right here in your neighborhood.</p>
+                </div>
+
+                <div class="w3-third w3-center">
+                    <img src="Images/pizza2.jpg">
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Grid -->
+        <div class="w3-row-padding w3-padding-64 w3-container">
+            <div class="w3-content">
+                <div class="w3-twothird">
+                    <h1>Our People</h1>
+                    <p class="w3-text-grey">Our people are the difference makers at Pizzapolis. We are a family owned company that values honesty, teamwork, punctuality, dedication and loyalty.
+                        We stress consistency in quality, service, and food offered in a unique environment by a staff that is committed to one another, our customer, and our community.</p>
+                </div>
+                <div class="w3-third w3-center">
+                    <img src="Images/pizza3.jpg">
+                </div>
+            </div>
+        </div>
+
+
+
+        <script>
+            // Used to toggle the menu on small screens when clicking on the menu button
+            function myFunction() {
+                var x = document.getElementById("navDemo");
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+        </script>
+
+    </body>
+</html>

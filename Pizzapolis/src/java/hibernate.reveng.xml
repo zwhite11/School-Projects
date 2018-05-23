@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+    <schema-selection match-catalog="Pizzapolis"/>
+    <table-filter match-name="pizza_sauce"/>
+    <table-filter match-name="order_pizza"/>
+    <table-filter match-name="pizza_toppings"/>
+    <table-filter match-name="toppings"/>
+    <table-filter match-name="order_sides"/>
+    <table-filter match-name="sides"/>
+    <table-filter match-name="pizza_crust"/>
+    <table-filter match-name="customer"/>
+    <table-filter match-name="pizza"/>
+    <table-filter match-name="order_summary"/>
+</hibernate-reverse-engineering>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <title>Pizzapolis</title>
+    <script src="clearGroup.js"></script>
+    <script src="orderScripts.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="tableSheet.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+        .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+        .fa-anchor,.fa-coffee {font-size:200px}
+    </style>
+    <body>
+
+        <!-- Navbar -->
+        <div class="w3-top">
+            <div class="w3-bar w3-red w3-card-2 w3-left-align w3-large">
+                <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+                <a href="./index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+                <a href="./aboutus.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Pizzapolis</a>
+                <div class="w3-dropdown-hover w3-red">
+                    <button class="w3-button w3-hide-small w3-padding-large w3-red w3-hover-white">Menu</button>
+                    <div class="w3-red w3-dropdown-content w3-bar-block w3-card-4 ">
+                        <a href="./pizza.html" class="w3-bar-item w3-button">Pizza</a>
+                        <a href="./sides.html" class="w3-bar-item w3-button">Sides</a>
+
+                    </div>
+                </div>  
+                <a href="./contactus.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact Us</a>
+                <a href="./order.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Order Online Now!</a>
+                <a href="./viewCart.html" class="w3-bar-item w3-button w3-padding-large">Your Cart</a>
+            </div>
+        </div>
+
+        <!-- First Grid -->
+        <div class="w3-row-padding w3-padding-64 w3-container">
+            <div class="w3-content">
+                <div class="w3-twothird">
+
+                    <form id="crust" class="w3-text-grey">
+                        <fieldset class="w3-large">
+                            <legend>Crusts</legend>
+                            <input type="radio" name="crust" value="Thin" checked>  Thin ($5)<br>
+                            <input type="radio" name="crust" value="Hand Tossed">  Hand Tossed ($5)<br>
+                            <input type="radio" name="crust" value="Cheese Crust">  Cheese Crust ($7)<br>
+                            <input type="radio" name="crust" value="Gluten Free">  Gluten Free ($8)<br>
+                            <input type="radio" name="crust" value="Whole Grain">  Whole Grain ($8) <br> 
+                        </fieldset>
+                    </form>
+
+                    <form id="sauce" class="w3-text-grey">
+                        <fieldset class="w3-large">
+                            <legend>Sauce ($5 each)</legend>
+                            <input type="radio" name="sauce" value="Tomato" checked>Tomato<br>
+                            <input type="radio" name="sauce" value="BBQ">BBQ Sauce<br>
+                        </fieldset>
+                    </form>
+                    <form id="meats" class="w3-text-grey"> 
+
+                        <fieldset>
+                            <legend>Meats ($2 each)</legend>
+                            <table align="center">
+                                <tr>
+                                    <td></td>
+                                    <th>Left Side</th>
+                                    <th>Whole Pizza</th>
+                                    <th>Right Side</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Pepperoni</td>
+                                    <td><input type="radio" name="Pepperoni" value="left"></td>
+                                    <td><input type="radio" name="Pepperoni" value="whole"></td>
+                                    <td><input type="radio" name="Pepperoni" value="right"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('pepperoni');"></td>
+                                </tr>
+                                <tr>
+                                    <td>Sausage</td>
+                                    <td><input type="radio" name="Sausage" value="left"></td>
+                                    <td><input type="radio" name="Sausage" value="whole"></td>
+                                    <td><input type="radio" name="Sausage" value="right"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('sausage');"></td>
+                                </tr>
+                                <tr>
+                                    <td>Chicken</td>
+                                    <td><input type="radio" name="Chicken" value="left"></td>
+                                    <td><input type="radio" name="Chicken" value="whole"></td>
+                                    <td><input type="radio" name="Chicken" value="right"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('Chicken');"></td>
+                                </tr>
+                                <tr>
+                                    <td>Shrimp</td>
+                                    <td><input type="radio" name="Shrimp" value="left"></td>
+                                    <td><input type="radio" name="Shrimp" value="whole"></td>
+                                    <td><input type="radio" name="Shrimp" value="right"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('Shrimp');"></td>
+                                </tr>
+                                <tr>
+                                    <td>Ground Beef</td>
+                                    <td><input type="radio" name="Ground Beef" value="left"></td>
+                                    <td><input type="radio" name="Ground Beef" value="whole"></td>
+                                    <td><input type="radio" name="Ground Beef" value="right"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('Ground Beef');"></td>
+                                </tr>
+                                <tr>
+                                    <td>Bacon</td>
+                                    <td><input type="radio" name="Bacon" value="left"></td>
+                                    <td><input type="radio" name="Bacon" value="whole"></td>
+                                    <td><input type="radio" name="Bacon" value="right"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('Bacon');"></td>
+                                </tr>
+                                <tr>
+                                    <td>Ham</td>
+                                    <td><input type="radio" name="Ham" value="left"></td>
+                                    <td><input type="radio" name="Ham" value="whole"></td>
+                                    <td><input type="radio" name="Ham" value="right"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('Ham');"></td>
+                                </tr> 
+                            </table>              
+
+                        </fieldset>
+                    </form>
+                    <form id="nonmeats" class="w3-text-grey">
+                        <fieldset>
+                            <legend>Non-Meats ($1 each)</legend>
+                            <table align="center">
+                                <tr>
+                                    <td></td>
+                                    <th>Left Side</th>
+                                    <th>Whole Pizza</th>
+                                    <th>Right Side</th>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Onions</td>
+                                    <td><input type="radio" name="Onions" value="left"></td>
+                                    <td><input type="radio" name="Onions" value="whole"></td>
+                                    <td><input type="radio" name="Onions" value="right"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('Onions');"></td>
+                                </tr> 
+                                <tr>
+                                    <td>Tomatoes</td>
+                                    <td><input type="radio" name="Tomatoes" value="left"></td>
+                                    <td><input type="radio" name="Tomatoes" value="whole"></td>
+                                    <td><input type="radio" name="Tomatoes" value="right"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('Tomatoes');"></td>
+                                </tr>
+                                <tr>
+                                    <td>Mushrooms</td>
+                                    <td><input type="radio" name="Mushrooms" value="left"></td>
+                                    <td><input type="radio" name="Mushrooms" value="whole"></td>
+                                    <td><input type="radio" name="Mushrooms" value="right"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('Mushrooms');"></td>
+                                </tr>
+                                <tr>
+                                    <td>Pineapple</td>
+                                    <td><input type="radio" name="Pineapple" value="left"></td>
+                                    <td><input type="radio" name="Pineapple" value="whole"></td>
+                                    <td><input type="radio" name="Pineapple" value="right"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('Pineapple');"></td>
+                                </tr>
+                                <tr>
+                                    <td>Jalapenos</td>
+                                    <td><input type="radio" name="Jalapenos" value="left"></td>
+                                    <td><input type="radio" name="Jalapenos" value="whole"></td>
+                                    <td><input type="radio" name="Jalapenos" value="right"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('Jalapenos');"></td>
+                                </tr>
+                                <tr>
+                                    <td>Green Peppers</td>
+                                    <td><input type="radio" name="Green Peppers" value="left"></td>
+                                    <td><input type="radio" name="Green Peppers" value="whole"></td>
+                                    <td><input type="radio" name="Green Peppers" value="right"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('Green Peppers');"></td>
+                                </tr>
+                                <tr>
+                                    <td>Banana Peppers</td>
+                                    <td><input type="radio" name="Banana Peppers" value="left"></td>
+                                    <td><input type="radio" name="Banana Peppers" value="whole"></td>
+                                    <td><input type="radio" name="Banana Peppers" value="right"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('Banana Peppers');"></td>
+                                </tr>
+                                <tr>
+                                    <td>Spinach</td>
+                                    <td><input type="radio" name="Spinach" value="left"></td>
+                                    <td><input type="radio" name="Spinach" value="whole"></td>
+                                    <td><input type="radio" name="Spinach" value="right"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('Spinach');"></td>
+                                </tr>
+                                <tr>
+                                    <td>Olives</td>
+                                    <td><input type="radio" name="Olives" value="left"></td>
+                                    <td><input type="radio" name="Olives" value="whole"></td>
+                                    <td><input type="radio" name="Olives" value="right"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('Olives');"></td>
+                                </tr>
+                                <tr>
+                                    <td>Extra Cheese</td>
+                                    <td><input type="radio" name="Extra Cheese" value="left"></td>
+                                    <td><input type="radio" name="Extra Cheese" value="whole"></td>
+                                    <td><input type="radio" name="Extra Cheese" value="right"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('Extra Cheese');"></td>
+                                </tr>
+
+                            </table>
+
+                        </fieldset>
+
+                    </form>
+
+                    <form action="viewCart.html" method="post">
+                        <button type=submit name="submit" class="w3-button w3-black w3-padding-large w3-round-xxlarge w3-margin-top" onClick="addPizzaToCart();">Add Pizza to Cart</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

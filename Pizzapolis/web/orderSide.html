@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <title>Pizzapolis</title>
+    <script src="clearGroup.js"></script>
+    <script src="orderScripts.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="tableSheet.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+        .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+        .fa-anchor,.fa-coffee {font-size:200px}
+    </style>
+    <body>
+
+        <!-- Navbar -->
+        <div class="w3-top">
+            <div class="w3-bar w3-red w3-card-2 w3-left-align w3-large">
+                <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+                <a href="./index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+                <a href="./aboutus.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Pizzapolis</a>
+                <div class="w3-dropdown-hover w3-red">
+                    <button class="w3-button w3-hide-small w3-padding-large w3-red w3-hover-white">Menu</button>
+                    <div class="w3-red w3-dropdown-content w3-bar-block w3-card-4 ">
+                        <a href="./pizza.html" class="w3-bar-item w3-button">Pizza</a>
+                        <a href="./sides.html" class="w3-bar-item w3-button">Sides</a>
+
+                    </div>
+                </div>  
+                <a href="./contactus.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact Us</a>
+                <a href="./order.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Order Online Now!</a>
+                <a href="./viewCart.html" class="w3-bar-item w3-button w3-padding-large">Your Cart</a>
+            </div>
+        </div>
+
+
+        <!-- First Grid -->
+        <div class="w3-row-padding w3-padding-64 w3-container">
+            <div class="w3-content">
+                <div class="w3-twothird">
+                    <form id="sides" class="w3-text-grey">
+                        <fieldset>
+                            <legend>Sides</legend>
+                            <table align="center">
+                                <tr>
+                                    <td></td>
+                                    <th>Small ($3)</th>
+                                    <th>Medium ($5)</th>
+                                    <th>Large ($7)</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Garlic Bread</td>
+                                    <td><input type="radio" name="Garlic Bread" value="Small"></td>
+                                    <td><input type="radio" name="Garlic Bread" value="Medium"></td>
+                                    <td><input type="radio" name="Garlic Bread" value="Large"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('Garlic Bread');"></td>
+                                </tr>
+                                <tr>
+                                    <td>Cheese Bread</td>
+                                    <td><input type="radio" name="Cheese Bread" value="Small"></td>
+                                    <td><input type="radio" name="Cheese Bread" value="Medium"></td>
+                                    <td><input type="radio" name="Cheese Bread" value="Large"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('Cheese Bread');"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Bread Sticks</td>
+                                    <td><input type="radio" name="Bread Sticks" value="Small"></td>
+                                    <td><input type="radio" name="Bread Sticks" value="Medium"></td>
+                                    <td><input type="radio" name="Bread Sticks" value="Large"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('Bread Sticks');"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Fries</td>
+                                    <td><input type="radio" name="Fries" value="Small"></td>
+                                    <td><input type="radio" name="Fries" value="Medium"></td>
+                                    <td><input type="radio" name="Fries" value="Large"></td>
+                                    <td><input type="button" value="Clear" onclick="clearGroup('Fries');"></td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </form>
+                    <form action="viewCart.html" method="post">
+                        <button type=submit name="submit" class="w3-button w3-black w3-padding-large w3-round-xxlarge w3-margin-top" onClick="addSideToCart();">Add Sides to Cart</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
