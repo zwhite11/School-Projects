@@ -1,0 +1,93 @@
+
+00:00
+PROFESSOR: Ghost methods. Spooky. OK, so let's get a little bit into philosophy. If a tree falls in the forest and nobody hears it fall, did the tree ever fall? More applicable to programming, if a method is invoked on an object and it's not found, was it really ever called at all?
+
+So this seems like a pretty silly question, right? So you have a class, SomeClass, and then that doesn't have any method. So this is their definition of a SomeClass. And then you instantiate the SomeClass instance, and then you call a method that says I_don_exist. Well, obviously, you're going to get no method error, undefined method I_don_exist for SomeClass because I_don_exist is a method that doesn't exist.
+
+So that seems like a pretty simple thing. Why am I even asking a question? Well, it turns out in Ruby it's not so simple. So whereas in Java what happens is if a method doesn't exist, you get an exception thrown and the sort of Java system handles that for you and throws an error, Ruby tries doing the same thing that Java would do.
+
+So it looks for a method invoked in the class to which it should belong, and then if it can't find it in there, and then it goes up the chain to the ancestor, you know, if it's a class or a module then it's mixed in to it, to a class.
+
+If it still doesn't find the method-- and here's where the interesting part happens-- it calls a method_missing method, which is defined all the way up in the object class. And the default behavior of method_missing happens to throw a NoMethodError error. So what you saw in the previous slide wasn't your Ruby Interpreter just sort of, you know, freaking out and throwing this undefined method I_don_exist error, it was an actual method on the object class that did that, which means that since method_missing is just a method defined on an abject, you can easily override it to do whatever you want it to do.
+
+And the method_missing has access to the method that was called, the arguments that were passed into it, as well as a block. So for example, let's solve this mystery of a mystery class. You have class called Mystery that has one method, and it's called method_missing. No other method is defined.
+
+And, again, this method_missing is overriding the method_missing of an object class. And the parameters are going to be a method, as well as the arguments that are passed into the method. And, as we're going to see, as well as a block. So it's going to say, looking for the method, which was passed in with params.
+
+What other parameters are we use with join syntax just to print them out with a comma. And then it says, oh, sorry. He's on vacation. And then what you could do is you could yield. If a block was passed into this method, whatever method it is, you could yield to that block if block given-- this checks if a block was actually passed in, because if it wasn't passed in, then the interpreter is going to indeed throw an error if you're trying to yield to a block that was not passed in.
+
+So what happens is you instantiate the variable called m, for Mystery class, and then you call a random method called solve_mystery and pass an" abc", 123123 as well as a block that says answer. All right, so in this case we are actually yielding a parameter to a block. So you have a block or parameter, and then it says, and the answer is, the answer.
+
+Whatever the parameter that was yielded to a block. So you're going to end up with this output that says, looking for solve_mystery with params. Sorry, he's on vacation, and the answer has ended up in method_missing. So the point of this slide is again that even though the solve_mystery method was never defined anywhere, but because you have method_missing, because you overrode the method_missing of an object, you yourself are able to define the behavior of how you want it to behave, which is pretty cool.
+
+So that's the point of ghost methods. Idea of ghost methods is that method_missing lets you fake out methods. And it's called ghost methods because methods don't really exists. OK. And Ruby's built-in classes use method_missing all over the place. And two specific examples I want to show is two classes called Struct and OpenStruct.
+
+So Struct, in Ruby, a Struct class, it behaves like the behavior we saw before of a dynamic method. So it defines-- it's defined to hold a set of variables and their accessors, as we're going to see in a minute. And OpenStruct is even more open than Struct is, and it works like a ghost methods where you just call a method on an OpenStruct class and, boom, a method becomes defined.
+
+So for example, an example of a Struct would be you define a Struct with a name and address instead of defining a class called Customer. So now you just basically say Struct.new and then you specify which properties you want the class or the Struct, which becomes a class, to have.
+
+And then you could use it as you would use your regular class. So I guess you'd call this your typical-- I guess Java would be POJO, Plain Old Java Object. So this would be your Plain Old Ruby Object. We just have a bunch of properties defined. And, optionally, if you want to maybe add a few methods to this, quote unquote," class," you could pass a block in with those methods as well.
+
+OK, the OpenStruct is not used as much as Struct so that's why to use OpenStruct you actually have to require ostruct. And we mentioned this before that sometimes things are not used as extensively in Ruby. You know, Ruby requires you to require those libraries and doesn't load them automatically not to load everything at once if you don't need it.
+
+So the way OpenStruct is used is that you could still define certain properties. So OpenStruct.new with name and age. So this builds you an object that has these properties, name were value of Joe, and age with value of 15. But here's the interesting part. So what you could do after that is you could call methods and it-- for example, sure, some_obj.sure equals three; some_obj.really, yes, it is true; and some_obj.not_only_strings, you could even assign integers.
+
+So then what happens is so these are the setters, because, as you notice, they have an equals sign here. You could print it out, the getter form of it-- name, some_obj.age, and some_obj.really-- and it's going to print out as if those properties actually exist and the value that you have assigned, which is pretty cool.
+
+So this might be useful, for example, if you have certain file that you're reading from and maybe only certain properties are going to be used. And so you have the ability to maybe specify a thousand things in a properties file, but, you know, based on your setup, maybe you're only going to ever use two or three or maybe 10 or 15, you could just specify it as an OpenStruct and then just do a dot and then call a method on it that you're trying to call, and it's going to just work.
+
+And, by the way, it's not even so hard to write a simple example of a MyOpenStruct. So all you would have to do is when you initialize, you would have to define a hash of attributes, which is empty. And then you would define the method_missing method, which would basically try to figure out what is the attribute.
+
+The attribute is whatever the name of a method is converted to string, because method_missing is going to get it as a symbol. So to convert a symbol to a string, you want a call a to_s in it. And then if an attribute ends-- that's what this dollar sign is-- if an attribute ends with an equals, then you know that it's a setter.
+
+So then what you want to do in that case is you want to chop off the equals from a name, and then just the sign, whatever the value is of this args, which was the actual value passed in to the hash. Otherwise, if it doesn't end with an equals, then it's probably just a name, the getter.
+
+So then, just great. Just go ahead and return that. So, for example, person MyOpenStruct.new person.name is Frank, and to output that puts person.name would give you back Frank. So this is pretty much a behavioral MyOpenStruct. It might not be as robust as an OpenStruct that's already provided by Ruby, so you should definitely use that, by just to demystify this OpenStruct is a simple example of how you write your own.
+
+OK, so getting back to our reporting system. I guess if you remember the reporting system was this reporting system that would delegate all the calls to the store and have a lot, a lot of methods. So if you're using the ghost methods pattern or [? IDA, ?] what you could do is you can just specify method_missing method, which basically says if a store has this method that's being called, if a store responds to this method, responds to, you know, an object method, an object class, that says, does this object, does this class, have this method, if a store responds to this method, then go ahead and call it by doing store.send(name).
+
+Otherwise, go up to a method_missing of an object and do whatever method_missing of an object [INAUDIBLE] class above this class does. Now, why do we care to use super here? Because, well, the problem is sometimes it's going to be a method that really doesn't exist anywhere. And you actually want the default behavior, the default behavior of method_missing, which is defined all the way in the object to actually throw an error message.
+
+Otherwise, what's going to end up happening is that you're going to be stuck in this infinite loop. Because let's say it's a method that really doesn't exist, right? So it's a method called abc, which is not defined anywhere. So if you wouldn't have this check for does it actually match what's in the store class, what you would have is you would try to call something in the store and then it wouldn't be there.
+
+And then it would say, oh, this method is not there, which would call again method_missing. And it would keep calling it again until you would get a heap size or something like that. So that's why it is nice to always fall back on the super method_missing, which is your [INAUDIBLE] higher up.
+
+OK, and this gives you exactly what you want to get, which is irs.get_piano_desc, irs.get_piano_price, even though irs doesn't seem to have a piano price, or get_piano_price method. And that's OK, because store has it, and when you call this get_piano_desc, let's say, or get_piano_price, it's going to look it up in the store and just use the store to call it.
+
+So you're still doing dynamic dispatch to call a method, but you're the ghost method to figure out which method it it that was called-- that was trying to be called-- and use it like that. OK, so the missing_method code we just saw works, but obviously the methods don't really exists, right?
+
+You're just faking it out as if it did exist. And you're doing damage control. It seems like you're doing damage control and you're just redirecting methods in certain ways. It's a very effective damage control, but it's just that. So the problem with that is that what if somebody asks your class, does your class respond to a method?
+
+For example, [? call.get piano desc. ?] Well, the answer will be no because the method is not defined, right? It's just with a method_missing method, which handles [INAUDIBLE] behavior, but there's no-- unlike with dynamic method approach, the method doesn't really exist. Never. Not before you start writing the program, not even when the program is running.
+
+It's never been defined. So what you could do is you could override the respond_to method as well. So, for example, in our reporting system what you could do is, in addition to method_missing, you can also specify a respond_to method which will say, yeah, besides for responding to-- well, so reporting system doesn't have any methods, but I respond to whatever methods the store responds to.
+
+So that's pretty cool. Now, another thing to keep in mind with method_missing is that the method_missing code will only get executed if-- get ready for this-- the method is actually missing. So if it's a method that actually exists in your class and just happens to have the same name as a pattern that you're trying to match, then the actual method will get called first.
+
+It will not go into method_missing because the method is not missing. So in situations like that what you want to do is you want to use the undef_method to actually undefine the method and remove it from the class hierarchy. Or what you could do is you could extend from BasicObject, instead of Object-- because BasicObject has much less methods than an Object-- and actually that was the whole idea of introducing BasicObject in Ruby 1.9 is for this whole" blank slate" approach where we give you a class to extend from that really has very little methods, very few methods, and then you could add methods as you wish and maybe do something like a ghost method approach on the class that doesn't really have methods.
+
+So just to give you a specific example, there is a builder [? jump, ?] and basically what the builder [? jump ?] does is it allows you to write your XML code in your Ruby. So for example, in this case you have xml.university(name:" JHU"), so the name becomes an attribute and university is an element.
+
+And there maybe because this is a block, so it knows to nest the xml.class("Ruby on Rail") and xml.class("Java on Grails"), and it produces this really nice XML. And it feels natural instead of, you know, having to remember to write always tags and open tag and close tag. You're just writing Ruby code.
+
+xml.university and this. And if you want to specify an attribute for something you specify it inside like that. So now but the question you could ask is isn't class a method? We've seen it before. You could call .class on an instance, and it will tell you what class it belongs to, right?
+
+So obviously what this builder [? jam ?] had to do in order for something like this the work was to remove the class, the real class method, the class method that is inherited from an object, and then you are able to say .class, because class is no longer a method defined in your object class because we removed it.
+
+Or maybe the approach we used was that they extended the BasicObject instead of the Object. Whichever way. And the last point to make about method_missing and performance is that if you think about it, the invocation of a method_missing is indirect, right? It only goes in the method_missing if it goes all the way up to a tree and all the way up to the Object and really can't find the method.
+
+Then as a last resource, the Ruby Interpreter will say, well, I've tried everything. I've tried looking in the class itself. I've tried going up the ancestor tree, and there's nothing I could do anymore. Oh, Yeah, wait. As the last resource I'm going to call a method_missing [? up ?] method on the object.
+
+So in theory that could take a little bit extra time just because it's not a direct call. The method, you know, it keeps on looking for a method. Where is it? Where is it? Where is it? And then eventually it finds it. Now, again, most of the time it's probably not going to matter too much.
+
+But if it does-- you know, and then you have your old saying that, you know, you only optimize if it's really a big deal, right? If it's not really a bottleneck, there's no reason to optimize it prematurely and not even consider method_missing. Now, we saw ghost method approach because of performance.
+
+But if it does bother you that this whole thing is happening indirectly, what you could consider is you could consider sort of a hybrid approach. And by hybrid approach I mean is that you could define a real method using the dynamic method approach from inside the method_missing after an attempted call to a method.
+
+So for example, you have a method that's been called, called abc, the method doesn't exist, and then the method_missing method will say, wait a second. OK, let me see. We're trying to call abc. What do I do with this? Oh, OK, fine. I know what to do with this.
+
+It probably needs to be applied and handled in a certain way. So then instead of just saying to handle them a certain way, you can go ahead and also define a method called abc, a real method in the class. Meaning, if it tried calling abc method [INAUDIBLE], well, I guess they didn't want to have an abc method in the class.
+
+So what this ends up doing is that even though you take a hit on the first time it tries to find abc, but if abc is in a [INAUDIBLE] but we repeat it a thousand, 10,000 times, the next, you know, however many times, the next 9,999 times, you don't take the hit anymore because it never goes into method_missing anymore.
+
+Instead, it goes into a real method abc, which you defined from inside your method_missing.

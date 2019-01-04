@@ -1,0 +1,65 @@
+
+00:00
+PROFESSOR: One of the interesting applications of meta programming in Ruby is something which is usually called dynamic methods. So the idea is in static languages like Java, the compiler usually requires you to define all methods upfront so you know exactly what's going to be in the class. Those methods get defined and the compiler compiles it.
+
+In dynamic languages such as Python or Ruby, you don't have to predefine methods. As long as those methods exist when the program runs and those methods need to be found, that's all that counts. And we'll see what difference this makes. So the obvious advantage of this is that in a static language, an IDE is much more likely to help you find methods and make sure that you don't misspell methods.
+
+Whereas in a dynamic language, IDE might not be as helpful because the methods might not even exist till later on. But on the other hand, in a static language lot of times there's this feeling that you're just writing methods to make the compiler happy. You know, let's say a certain class implements a certain interface, you know, so even if you don't need all the methods of an interface, you end up writing all those methods defining blank methods and things like that which you would not have to do in a language that's not static.
+
+And let's see a concrete example of this. So for example, let's say you have a Store class and all that Store class does, for example, is have maybe a price and a description of the products in the store. And you are tasked to build a reporting system that would use that Store class with information, maybe report on the store's products.
+
+It's a somewhat contrived example, but gives an idea of how this is useful. So your Store class would look very simple like this. So you have methods maybe get piano description and get piano price, get violin description, get violin price, and so on for all the methods for all the different products in your store.
+
+So then your reporting system, maybe your first pass would be to have a class called Reportingsystem in which you would initialize the Store class and then pretty much delegate all the methods to the Store. So, for example, you would have a get piano description method in your reporting system, which would essentially just delegate its functionality to Store and just call the store get piano description.
+
+And this works just fine. You have the initialize reporting system, and then you say get piano description costs, get piano price, maybe do some Ruby alignment to align result. But the problem-- the obvious problem is that if you end up doing it this way, you're going to have all of these methods for every single product.
+
+You're going to have a get x description and get x price for every single product in the store and so your reporting system class is going to balloon out of proportion for every product in the store. So let's see if there's maybe a way to make this a little better.
+
+So before diving into a solution, there's this idea of calling methods dynamically, right? So, so far what we've seen is that you could call methods using your regular object dot method notation, which is a notation that's pretty much standard in every language out there including Java, JavaScript, and pretty much every other language and Ruby as well.
+
+Now, it turns out that another way to call method in Ruby is by using a send method. And the first parameter would be just your method name or a symbol of a method and the rest of the parameters to a send method would be the method arguments that you pass in.
+
+And what's the idea of calling this send? It's just if you think of it as sending a message to an object, so an object is sending a message by its specific name. So, for example, what I'm talking about is let's say you have a Dog class that has a bark method and a greet method.
+
+So bark method doesn't take any parameters, but greet method does. Take a parameter and then you initialize the Dog class. You could just say Dog.bark-- that's perfectly fine. But you could also say Dog.send which basically says send a message to a Dog instance specifically using the bark method. And so these two are identical as well as you could use a symbol for method and say Dog.send symbol bark.
+
+Now, another cool thing is that you could even save a method name and a variable so you have method name colon bark and then you could just say Dog send method name, which happens to resolve to a bark symbol and that works as well. And then if you want to send parameters using the send approach, you would just pass a parameter like, in this case, we have the greet method as a parameter or multiple parameters as your second parameter to a send method.
+
+OK. And this is called dynamic dispatch. You're dynamically dispatching a call to a method not by using the actual name of a method, but you are dynamically calling a method which is maybe sent in a variable or something. And the benefit of this approach is that you can decide at runtime which methods to call.
+
+And, again, so the code doesn't have to find out till runtime which method it needs to call and that is a benefit. So, for example, you have some YAML, right? So you have some YAML stored somewhere in the file and name is John and age is 24. It's your little YAML, your require YAML library.
+
+And then you also have a Person class which is just a very simple Person class with two attributes-- name and age. And because it's to add an accessor what it does is it builds the senders and getters for you. And then you create an instance of a person by just saying Person.new and then you load the YAML into a properties file.
+
+And then what you could do is you could-- which pretty much gives you a hash or a name is John and the age is 24. And what you could do then is that you could look through the keys in this hash and values and then you could use a send method on the person that you created.
+
+And then interpolate the name of a method and add equals after it to assign a value and then pass in the actual value trying to pass end. And that's going to initialize a person with name is John and age is 24. So the hash doesn't even know which methods it's calling, but it is calling methods-- the name equals method and the age equals method through the send syntax.
+
+The interesting part about send is that it even lets you call object's private methods, which you would think is very non-object oriented and you would be right. It sort of breaks encapsulation. And they sort of realized this in Ruby 1.9 and they said, you know, maybe we shouldn't be letting send call private methods.
+
+And they tried restricting it, putting it back. But pretty much the community rebelled and they said, no, we like send the way it is with the ability to call private methods. And Ruby is very into this whole idea that programmer is king and a programmer knows what he's doing and it's OK sometimes to break that encapsulation and call private methods of send.
+
+So they reverted back so send still allows you to call private methods in Ruby 1.9. There is now also your alias, a separate method called public send which only allows you to call public methods using pretty much the same syntax as the send does. OK, so that's dynamic dispatch, calling methods that already exist dynamically.
+
+Results in this idea of dynamic method which is the idea that you could define methods dynamically. So not only do you call them with send dynamically, could also define them dynamically. And how do you do that? You use a define method method and you pass a method name as a symbol and then a block as your last parameter, which in the body of a block you actually specify the method definition.
+
+So and when it's executing in a class, it will define an instance method for that class. So, for example, you have a class called Whatever and then you say define_method, make_it_up, and then puts Whatever. And then when you get an instance of Whatever, you have this make_it_up that you can call.
+
+Now, you could ask so what is exactly the point of this? I mean, isn't this just basically doing the same thing as just saying def and then make_it_up and then just put in the body, puts whatever. Isn't that pretty much identical? So why would you do it this way?
+
+Now, doing it this way doesn't define the method until the program actually runs. So whereas with def make_it_up puts Whatever, you know, it already exists so maybe your IDE-- so that's one reason why you'd want to do it actually the other way of actually have def, make_it_up and that puts Whatever.
+
+So why would you have it define a method using this define method method? Seems kind of silly. So but so here's the cool part. So knowing those two ideas of dynamic dispatch and dynamic method, so looking back at our reporting system which just has initialize the Store and then delegates all our cost to the store, get piano description, get piano price, and gets this, and it has many more methods in between that.
+
+It would just seem very repetitive. What you could do is you could instead grap on the methods of Store by doing store.methods.grap. And then grap for the get something description type of methods. And notice the parenthesis in here. I am using a capture group to capture the whatever the product name is, in this case maybe piano or violin or whatever.
+
+And then grap takes a block to say, OK, now that I have found all these things, what do you want me to do about it? So what you could do is you could say, well, go ahead and say reporting system that define_report_methods_for $1. Remember, $1 is a regular expression syntax that pretty much matches the capture group to the first capture group that was found.
+
+And then you have this define_report_methods_for this item method which let's you say, great, define method and then get whatever the item is-- get piano description, get piano price. And then the actual body of the method is store_send, get piano description, get piano price. So it delegates in here. So you need to have a dynamic dispatch part of it in the actual method body because you can't specify it exactly because you don't know what it is until you get the variable.
+
+So this part is the dynamic dispatch and this is a dynamic method. So it ends up being that this ends up being your whole class and you don't have all those silly methods which are very repetitive in nature fooling around. So the benefit's actually twofold. Number one, there's no more duplication.
+
+So you don't have to write all those methods. That's number one. Number two, the bonus is that your reporting system class ends up being forward compatible so that if somebody adds another product to the store, as long as the pattern fit, the method naming pattern is the same, your reporting system already" knows" quote unquote about the product and is able to accurately report on it even though you're not changing the code anymore than the reporting system.
+
+So that's the benefit of doing things dynamically and this is one of the interesting things about metaprogramming.
