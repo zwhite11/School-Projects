@@ -1,0 +1,581 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"todo",
+				"todo_list"
+			],
+			[
+				"tod",
+				"todo_item"
+			],
+			[
+				"to",
+				"todo_item"
+			],
+			[
+				"tos",
+				"todo_items"
+			],
+			[
+				"todo_",
+				"todo_items"
+			],
+			[
+				"st",
+				"style\tAttr"
+			],
+			[
+				"lo",
+				"login"
+			],
+			[
+				"tag",
+				"tag_name"
+			],
+			[
+				"test",
+				"test_account"
+			],
+			[
+				"valid",
+				"validate"
+			],
+			[
+				"te",
+				"test_account"
+			],
+			[
+				"all",
+				"allToDo"
+			],
+			[
+				"Todo",
+				"TodoList"
+			],
+			[
+				"Bu",
+				"Business"
+			],
+			[
+				"ingr",
+				"Ingrediants"
+			],
+			[
+				"in",
+				"ingredient"
+			],
+			[
+				"att",
+				"attribute"
+			],
+			[
+				"method",
+				"method_name"
+			],
+			[
+				"yam",
+				"yaml_data"
+			],
+			[
+				"students",
+				"students_array"
+			],
+			[
+				"id",
+				"id_count"
+			],
+			[
+				"for",
+				"foreach"
+			],
+			[
+				"read",
+				"read_students"
+			],
+			[
+				"stue",
+				"students_array"
+			],
+			[
+				"student",
+				"students_array"
+			],
+			[
+				"stu",
+				"students"
+			],
+			[
+				"numb",
+				"number_of_courses"
+			],
+			[
+				"tak",
+				"taking_courses"
+			],
+			[
+				"cour",
+				"course_id"
+			],
+			[
+				"cou",
+				"course_name"
+			],
+			[
+				"course",
+				"course_id"
+			],
+			[
+				"co",
+				"course_name"
+			],
+			[
+				"studen",
+				"student_id"
+			],
+			[
+				"ste",
+				"state"
+			],
+			[
+				"S",
+				"student"
+			],
+			[
+				"cours",
+				"course_name"
+			],
+			[
+				"unique",
+				"unique_domains"
+			],
+			[
+				"word",
+				"words_with_domains"
+			],
+			[
+				"sel",
+				"select"
+			],
+			[
+				"just",
+				"just_domains"
+			],
+			[
+				"just_",
+				"just_ends"
+			],
+			[
+				"se",
+				"select"
+			],
+			[
+				"uni",
+				"unique_domains"
+			],
+			[
+				"eac",
+				"eac-\teach_char { |chr| .. }"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/D/Classes/edX - Node/crud-mongo-rest-api/server.js",
+			"settings":
+			{
+				"buffer_size": 1513,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/zacsw/Documents/Projects/penguinStatSite/players.controller.js",
+			"settings":
+			{
+				"buffer_size": 342,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/Classes/Ajax/Module 2/module2_solution/.git/config",
+			"settings":
+			{
+				"buffer_size": 326,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Classes/edX - Node/test/package.json",
+		"/D/Classes/edX - Node/.git/config",
+		"/D/Classes/edX - Node/rest-api/package.json",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture42/src/app.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture42/css/styles.css",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture42/index.html",
+		"/G/basketballData/birthStateCount/part-r-00000",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture41/src/shoppinglist/main-shoppinglist.controller.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture41/src/routes.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture41/src/shoppinglist/item-detail.controller.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture41/index.html",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture41/css/styles.css",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture41/src/shoppinglist/templates/main-shoppinglist.template.html",
+		"/D/Classes/Ajax/Module 5/solution/assignment5/index.html",
+		"/D/Classes/Ajax/Module 5/solution/assignment5/css/styles.css",
+		"/D/Classes/Ajax/Module 3/module3/index.html",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture41/src/shoppinglist/templates/shoppinglist.template.html",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture41/src/shoppinglist/templates/item-detail.template.html",
+		"/D/Classes/Ajax/Module 4/module4_solution/index.html",
+		"/D/Classes/Ajax/ajax/module6/index.html",
+		"/D/Classes/Ajax/ajax/module6/app.js",
+		"/D/Classes/Ajax/ajax/module7/index.html",
+		"/D/Classes/Ajax/ajax/module7/app.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture41/src/shoppinglist/templates/home.template.html",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture41/src/shoppinglist/shoppinglist.module.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture41/src/shoppinglist/shoppinglist.component.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture41/src/shoppinglist/shoppinglist.service.js",
+		"/D/Classes/Ajax/ajax/module9/index.html",
+		"/D/Classes/Ajax/ajax/module8/app.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture41/src/spinner/loadingspinner.component.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture30/shoppingList.html",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture30/index.html",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture30/app.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture24/app.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture24/index.html",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture30/this.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture30/this.html",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture29/index.html",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture29/app.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture28/app.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture28/index.html",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture27/app.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture26/app.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture25/app.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture33/app.js",
+		"/D/Classes/Hadoop/Module8/Assignment 5 Solution, Zachary White/Assignment5_Project_ZacharyWhite/RatingCombiner.java",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture21/app.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture20/app.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture20/index.html",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture17/app.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture17/index.html",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture13/app.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture13/index.html",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture23/app.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture23/index.html",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture21/index.html",
+		"/D/Classes/Hadoop/Module8/mapreduce-intermediate/mapreduce-intermediate/src/bdpuh/mapreduceintermediate/WordCountUsingCombiner.java",
+		"/D/Classes/Hadoop/Module8/mapreduce-intermediate/mapreduce-intermediate/src/bdpuh/mapreduceintermediate/WordCountMapper.java",
+		"/D/Classes/Hadoop/Module8/mapreduce-intermediate/mapreduce-intermediate/src/bdpuh/mapreduceintermediate/WordCountCombiner.java",
+		"/D/Classes/Hadoop/Module8/mapreduce-intermediate/mapreduce-intermediate/src/bdpuh/mapreduceintermediate/WordCountReducer.java",
+		"/D/Classes/Hadoop/Module7/mapreduce-basics/mapreduce-basics/src/bdpuh/mapreducebasics/WordCountReducer.java",
+		"/D/Classes/Hadoop/Module7/mapreduce-basics/mapreduce-basics/src/bdpuh/mapreducebasics/WordCountMapper.java",
+		"/D/Classes/Hadoop/BasketballDB-20130121/basketball_players.csv",
+		"/D/Classes/Hadoop/BasketballDB-20130121/basketball_abbrev.csv",
+		"/C/Users/zacsw/Documents/Impactor_0.9.41/R49.ipa",
+		"/D/Classes/Hadoop/Module7/Solution/run.sh",
+		"/D/Classes/Hadoop/Module7/mapreduce-basics/mapreduce-basics/src/bdpuh/mapreducebasics/WordCount.java",
+		"/D/Classes/Hadoop/BasketballDB-20130121/basketball_teams.csv",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture09/app.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture09/index.html",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture10/index.html",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture10/app.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture11/index.html",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture11/app.js",
+		"/D/Classes/Ajax/ajax/module4_solution/js/script.js",
+		"/D/Classes/Ajax/ajax/module4_solution/js/SpeakGoodBye.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture08/app.js",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture08/index.html",
+		"/D/Classes/Ajax/angular/fullstack-course5/examples/Lecture10/beginning-of-lecture-code/app.js",
+		"/D/Classes/Hadoop/Module4/module-04-examples/hdfs-filecrud/src/bdpuh/hdfs/filecrud/ProgressableFileCopy.java",
+		"/D/Classes/Hadoop/Module5/module-05-examples/hdfs-compression/src/bdpuh/filecompression/HdfsGzipCompression.java",
+		"/D/Classes/Ajax/fullstack-course4/examples/Lecture61/after/js/script.js",
+		"/D/Classes/Hadoop/Module5/module-05-examples/hdfs-dircrud/src/bdpuh/hdfs/dircrud/HdfsDirCreate.java",
+		"/D/Classes/Ajax/Module 5/solution/assignment5-solution-starter/snippets/category-snippet.html",
+		"/D/Classes/Ajax/Module 4/module4_solution/js/SpeakHello.js",
+		"/D/Classes/Hadoop/Module5/module-05-examples/hdfs-dircrud/src/bdpuh/hdfs/dircrud/HdfsDirRead.java",
+		"/D/Classes/Hadoop/Module4/module-04-examples/hdfs-filecrud/src/bdpuh/hdfs/filecrud/HdfsFileCreate.java",
+		"/D/Classes/Ajax/fullstack-course4/assignments/assignment4/assignment4-solution-starter/harder/script.js",
+		"/C/Users/zacsw/AppData/Local/Temp/Rar$DIa16340.3195/web.xml",
+		"/D/Classes/Ajax/fullstack-course4/examples/Lecture50/js/script.js",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/app/views/todo_lists/index.html.erb",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/app/views/todo_items/show.html.erb",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/app/controllers/todo_items_controller.rb",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/app/views/todo_lists/show.html.erb",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/app/views/todo_items/new.html.erb",
+		"/D/Classes/Enterprise Computing with Java/ZW_SRS/WEB-INF/web.xml",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/app/views/todo_items/_new_item.html.erb",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/app/controllers/todo_lists_controller.rb",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/app/views/todo_items/index.html.erb",
+		"/E/WD SmartWare.swstor/ZAC-PC/Volume.11f49145.8b0a.11e1.b8ff.806e6f6e6963/Users/Zac/Desktop/sd.jnlp",
+		"/E/WD SmartWare.swstor/ZAC-PC/Volume.11f49145.8b0a.11e1.b8ff.806e6f6e6963/Users/Zac/Documents/JDBC.java",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/config/routes.rb",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/app/views/todo_items/edit.html.erb",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/app/views/todo_items/_form.html.erb",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/db/migrate/20170803001539_create_tags_todo_items.rb",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/db/migrate/20170802111123_create_tags_todoitems.rb",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/db/migrate/20170802072911_create_users.rb",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/db/migrate/20170818045155_create_users.rb",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/db/schema.rb",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/app/models/todo_list.rb",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/app/models/todo_item.rb",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/app/views/todo_lists/_form.html.erb",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/app/views/todo_lists/edit.html.erb",
+		"/D/Classes/Ruby on Rails/Module 10/advanced_ar/Gemfile",
+		"/D/Classes/Ruby on Rails/Module 8/assignment6/advanced_ar/db/schema.rb",
+		"/D/Classes/Ruby on Rails/Module 8/assignment6/advanced_ar/app/models/todo_item.rb",
+		"/D/Classes/Ruby on Rails/Module 8/assignment6/advanced_ar/app/controllers/todo_items_controller.rb",
+		"/D/Classes/Ruby on Rails/Module 8/assignment6/advanced_ar/app/views/todo_lists/show.html.erb",
+		"/D/Classes/Ruby on Rails/Module 8/assignment6/advanced_ar/app/models/todo_list.rb",
+		"/D/Classes/Ruby on Rails/Module 8/assignment6/advanced_ar/app/views/todo_lists/_form.html.erb",
+		"/D/Classes/Ruby on Rails/Module 8/assignment6/advanced_ar/app/controllers/todo_lists_controller.rb",
+		"/D/Classes/Ruby on Rails/Module 8/assignment6/advanced_ar/app/views/todo_items/edit.html.erb",
+		"/D/Classes/Ruby on Rails/Module 8/assignment6/advanced_ar/app/views/todo_lists/new.html.erb",
+		"/D/Classes/Ruby on Rails/Module 8/assignment6/advanced_ar/app/assets/stylesheets/application.css",
+		"/D/Classes/Ruby on Rails/Module 8/assignment6/advanced_ar/db/seeds.rb",
+		"/D/Classes/Ruby on Rails/Module 8/assignment6/advanced_ar/app/views/layouts/application.html.erb",
+		"/D/Classes/Ruby on Rails/Module 8/assignment6/advanced_ar/app/views/todo_items/_form.html.erb",
+		"/D/Classes/Ruby on Rails/Module 8/assignment6/advanced_ar/Gemfile"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"direct",
+			"onRem",
+			"buildAndShowCategoriesHTML",
+			"15000"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/D/Classes/edX - Node/crud-mongo-rest-api/server.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1513,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								388,
+								363
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 48.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/zacsw/Documents/Projects/penguinStatSite/players.controller.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 342,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/Classes/Ajax/Module 2/module2_solution/.git/config",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 326,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Git Formats/Git Config.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "ROR_Module3.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 225.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
