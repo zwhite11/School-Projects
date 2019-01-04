@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Contact Manager</string>
+    <string name="save_data_title">Save Data?</string>
+    <string name="save_data_message">Do you want to save your changes?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_edit">EditActivity</string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
+    <string name="aboutText">This is the about page. \n Welcome!</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_reload">refresh</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="home_phone">Home Phone</string>
+    <string name="work_phone">Work Phone</string>
+    <string name="mobile_phone">Mobile Phone</string>
+    <string name="email_address">Email Address</string>
+    <string name="about">About</string>
+</resources>

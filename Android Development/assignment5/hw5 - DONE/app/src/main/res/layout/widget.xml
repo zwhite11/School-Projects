@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/widget"
+    android:layout_weight="1">
+
+    <TextView
+        android:id="@+id/text"
+        android:textColor="@color/colorAccent"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:textSize="16pt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/widgetAdd"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/add_item"
+            android:drawableLeft="@drawable/ic_add_black_24dp"
+            />
+
+        <Button
+            android:id="@+id/widgetSnooze"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/snooze"
+            android:drawableLeft="@drawable/ic_replay_10_black_32dp"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

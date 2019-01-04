@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals
+        name="itemsDue">
+        <item quantity="one">1 Item Due </item>
+        <item quantity="two">2 Items Due </item>
+        <item quantity="other">Multiple Items Due</item>
+    </plurals>
+</resources>
