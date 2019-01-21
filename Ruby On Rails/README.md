@@ -4,3 +4,6 @@ This course was complete during the Summer 17 semester at Johns Hopkins Universi
 
 ## Module 10
 Small to-do list application.  Allows the user to log in and create new to-do lists and add new tasks.
+
+## Module 3
+Ruby program that reads in a text file and outputs an accurate count of domain names found in that document.
